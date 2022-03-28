@@ -48,6 +48,6 @@ app.post('/addTemperature', addTemperature);
 function addTemperature (req,res){
   projectData = {...req.body};
   res.send(projectData);
-  // console.log(projectData);
+  console.log(projectData);
 };
 
