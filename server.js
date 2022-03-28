@@ -4,6 +4,11 @@ projectData = {};
 // Require Express to run server and routes
 const express = require('express');
 
+const DarkSkyApi = require('dark-sky-api');
+
+// Static configuration is suggested.
+DarkSkyApi.apiKey = 'a177f8481c31fa96c3f95ad4f4f84610';
+
 // Start up an instance of app
 const app = express();
 
