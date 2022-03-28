@@ -3,7 +3,7 @@ const generateBtn = document.querySelector('#generate');
 
 // Personal API Key for OpenWeatherMap API
 const apiKey = 'a61a89e4fe9e4551a5e2b91fb1180525';
-let baseURL = 'http://api.openweathermap.org/data/2.5/weather?'
+let baseURL = 'http://api.openweathermap.org/data/2.5/weather?';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -20,7 +20,6 @@ function performAction(e) {
         postData('/addTemperature', {
             date: newDate,
             Temp: data,
-            content: feeling
         });
         updateUI();
     });
