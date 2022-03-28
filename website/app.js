@@ -14,9 +14,7 @@ generateBtn.addEventListener('click', performAction);
 
 /* Function called by event listener */
 function performAction(e) {
-    const zipCode = document.getElementById('zip').value;
-    const feeling = document.querySelector('#feelings').value;
-    getTempAPI(baseURL, zipCode, apiKey);
+    getTempAPI(baseURL, apiKey)
     .then(function (data) {
         console.log('.then', data);
         postData('/addTemperature', {
@@ -29,8 +27,8 @@ function performAction(e) {
 }
 
 /* Function to GET Web API Data*/
-const getTempAPI = async (baseURL, zipCode, apiKey) => {
-    const fullURL = `${baseURL}zip=${zipCode}&appid=${apiKey}&units=metric`;
+const getTempAPI = async (baseURL, apiKey) => {
+    const fullURL = `${baseURL}&appid=${apiKey}&units=metric`;
     console.log(fullURL);
     const res = await fetch(fullURL);
     try {

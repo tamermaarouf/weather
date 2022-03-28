@@ -38,7 +38,7 @@ const server = app.listen(port, listening);
 
 // Callback function to complete GET '/all'
 function sendData (request, response) {
-  // console.log(projectData);
+  console.log(projectData);
   response.send(projectData);
 }
 
